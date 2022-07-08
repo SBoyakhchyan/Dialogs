@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/submit_btn_color" />
+    <corners android:radius="@dimen/dimens_10" />
+    <padding
+        android:bottom="@dimen/dimens_4"
+        android:left="@dimen/dimens_51"
+        android:right="@dimen/dimens_51"
+        android:top="@dimen/dimens_4" />
+</shape>

@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Dialogs</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="set_ringtone">Set ringtone</string>
+    <string name="label_dialog">Label</string>
+    <string name="ringtone_dialog_title">Phone ringtone</string>
+    <string name="label_dialog_title">Label as:</string>
+    <string name="toast_choice_message">You have choose %s</string>
+    <string name="ok_text">OK</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="accept_ringtone">New ringtone was set</string>
+    <string name="multi_choice_text">You choose %s</string>
+    <string name="label_choose">Labels chosen</string>
+    <string name="label_uncheck">%s label unchecked</string>
+    <string name="label_cancel">No label chosen</string>
+    <string name="username_hint_text">Username</string>
+    <string name="e_mail_hint_text">E-mail ID</string>
+    <string name="submit_btn_text">Submit</string>
+    <string name="alternative_login">or login with</string>
+    <string name="welcome_to_smart_text">Welcome to SmartLights</string>
+    <string-array name="ringtone_list">
+        <item>None</item>
+        <item>Callisto</item>
+        <item>Ganymede</item>
+        <item>Luna</item>
+    </string-array>
+    <string-array name="label_list">
+        <item>None</item>
+        <item>Forums</item>
+        <item>Social</item>
+        <item>Updates</item>
+    </string-array>
+</resources>

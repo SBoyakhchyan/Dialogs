@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".LogInDialog">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="82dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="@dimen/dimens_10"
+        android:background="@drawable/logo_background"
+        android:padding="@dimen/dimens_8"
+        android:src="@drawable/ic_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_welcome"
+        style="@style/welcome_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dimens_37"
+        android:layout_marginTop="@dimen/dimens_62"
+        android:inputType="textEmailAddress"
+        android:text="@string/welcome_to_smart_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/ed_username"
+        style="@style/Input_text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/dimens_70"
+        android:hint="@string/username_hint_text"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_welcome" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/ed_e_mail"
+        style="@style/Input_text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_37"
+        android:hint="@string/e_mail_hint_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ed_username" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_submit"
+        style="@style/submit_btn_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_37"
+        android:text="@string/submit_btn_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ed_e_mail" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_alternative"
+        style="@style/welcome_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_22"
+        android:inputType="textEmailAddress"
+        android:text="@string/alternative_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_submit" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/google_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_27"
+        android:layout_marginEnd="@dimen/dimens_4"
+        android:padding="@dimen/dimen_4"
+        android:src="@drawable/ic_google"
+        app:layout_constraintEnd_toStartOf="@+id/facebook_ic"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_alternative" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/facebook_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_4"
+        android:layout_marginTop="@dimen/dimen_27"
+        android:padding="@dimen/dimen_4"
+        android:src="@drawable/ic_facebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/google_ic"
+        app:layout_constraintTop_toBottomOf="@+id/tv_alternative" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
