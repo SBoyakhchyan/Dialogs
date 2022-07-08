@@ -1,7 +1,5 @@
 package com.example.dialogs
 
-import android.app.AlertDialog
-import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -31,6 +29,7 @@ class LogInDialog : DialogFragment() {
         submit.setOnClickListener {
             DialogButtons().newData(username.text.toString(), email.text.toString())
             dismiss()
+            clearFields()
         }
     }
 
@@ -42,5 +41,10 @@ class LogInDialog : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    private fun clearFields() {
+        username.setText("")
+        email.setText("")
     }
 }

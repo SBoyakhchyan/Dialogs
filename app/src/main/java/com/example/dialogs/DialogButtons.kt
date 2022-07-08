@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment
 import com.example.dialogs.Constants.Companion.EMAIL_KEY
 import com.example.dialogs.Constants.Companion.USERNAME_KEY
 
-
 class DialogButtons : Fragment() {
     private lateinit var setRingtone: AppCompatButton
     private lateinit var label: AppCompatButton
@@ -32,8 +31,6 @@ class DialogButtons : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
     }
 
     override fun onCreateView(
@@ -43,7 +40,6 @@ class DialogButtons : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_dialog_buttons, container, false)
         return view
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,16 +52,18 @@ class DialogButtons : Fragment() {
     override fun onPause() {
         super.onPause()
         setInputData()
-        Log.d("TAG","PAUSE")
+        Log.d("TAG", "PAUSE")
     }
 
     private fun setInputData() {
         arguments?.let {
             userInputData.text =
-                it.getString(USERNAME_KEY).toString() + "\n" + it.getString(EMAIL_KEY).toString()
+                String.format(
+                    it.getString(USERNAME_KEY).toString() + "\n" + it.getString(EMAIL_KEY)
+                        .toString()
+                )
         }
     }
-
 
     private fun initView() {
         ringtoneList = resources.getStringArray(R.array.ringtone_list)
@@ -110,11 +108,9 @@ class DialogButtons : Fragment() {
             .setPositiveButton(getString(R.string.ok_text)) { _, _ ->
                 setRingtone(setItem)
                 initToast(getString(R.string.accept_ringtone))
-
             }
             .setNegativeButton(getString(R.string.cancel_text)) { _, _ ->
                 initToast(getString(R.string.cancel_text))
-
             }
             .create()
     }
@@ -139,13 +135,11 @@ class DialogButtons : Fragment() {
                     initToast(String.format(getString(R.string.label_uncheck), labelList[i]))
                 }
             }
-
             .setCancelable(false)
             .setPositiveButton(getString(R.string.ok_text))
             { _, _ ->
                 setLabel(labelSetTemp)
                 initToast(getString(R.string.label_choose))
-
             }
             .setNegativeButton(getString(R.string.cancel_text))
             { _, _ ->
@@ -162,18 +156,17 @@ class DialogButtons : Fragment() {
         labelSet.text = ""
         label.forEach {
             if (it != label.last()) {
-                labelSet.text = labelSet.text.toString() + "$it, "
+                labelSet.text = String.format(labelSet.text.toString() + "$it, ")
             } else {
-                labelSet.text = labelSet.text.toString() + it
+                labelSet.text = String.format(labelSet.text.toString() + it)
             }
         }
     }
 
     fun newData(username: String, email: String) {
-            arguments = Bundle().apply {
-                putString(USERNAME_KEY, username)
-                putString(EMAIL_KEY, email)
-
-            }
+        arguments = Bundle().apply {
+            putString(USERNAME_KEY, username)
+            putString(EMAIL_KEY, email)
+        }
     }
 }
