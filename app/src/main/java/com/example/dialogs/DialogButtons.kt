@@ -29,10 +29,6 @@ class DialogButtons : Fragment() {
     private lateinit var login: AppCompatButton
     private lateinit var dialogLogIn: DialogFragment
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -63,6 +59,7 @@ class DialogButtons : Fragment() {
                         .toString()
                 )
         }
+
     }
 
     private fun initView() {
@@ -97,7 +94,7 @@ class DialogButtons : Fragment() {
     }
 
     private fun singleChoiceDialogBuilder() {
-        var setItem: String = ""
+        var setItem = ""
         ringtoneDialog = AlertDialog.Builder(requireContext())
             .setTitle(getString(R.string.ringtone_dialog_title))
             .setSingleChoiceItems(ringtoneList, 0) { _, i ->
